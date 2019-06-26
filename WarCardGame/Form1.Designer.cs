@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -36,8 +37,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.p2_current_card = new System.Windows.Forms.Label();
-            this.p1_current_card = new System.Windows.Forms.Label();
+            this.p1_picture = new System.Windows.Forms.PictureBox();
+            this.p2_picture = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.p1_picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p2_picture)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -114,29 +117,30 @@
             this.label10.Size = new System.Drawing.Size(0, 20);
             this.label10.TabIndex = 7;
             // 
-            // p2_current_card
+            // p1_picture
             // 
-            this.p2_current_card.AutoSize = true;
-            this.p2_current_card.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.p2_current_card.Location = new System.Drawing.Point(338, 80);
-            this.p2_current_card.Name = "p2_current_card";
-            this.p2_current_card.Size = new System.Drawing.Size(0, 20);
-            this.p2_current_card.TabIndex = 9;
+            this.p1_picture.InitialImage = ((System.Drawing.Image)(resources.GetObject("p1_picture.InitialImage")));
+            this.p1_picture.Location = new System.Drawing.Point(342, 171);
+            this.p1_picture.Name = "p1_picture";
+            this.p1_picture.Size = new System.Drawing.Size(50, 76);
+            this.p1_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.p1_picture.TabIndex = 8;
+            this.p1_picture.TabStop = false;
             // 
-            // p1_current_card
+            // p2_picture
             // 
-            this.p1_current_card.AutoSize = true;
-            this.p1_current_card.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.p1_current_card.Location = new System.Drawing.Point(338, 215);
-            this.p1_current_card.Name = "p1_current_card";
-            this.p1_current_card.Size = new System.Drawing.Size(0, 20);
-            this.p1_current_card.TabIndex = 10;
+            this.p2_picture.Location = new System.Drawing.Point(342, 76);
+            this.p2_picture.Name = "p2_picture";
+            this.p2_picture.Size = new System.Drawing.Size(50, 76);
+            this.p2_picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.p2_picture.TabIndex = 9;
+            this.p2_picture.TabStop = false;
             // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(736, 342);
-            this.Controls.Add(this.p1_current_card);
-            this.Controls.Add(this.p2_current_card);
+            this.Controls.Add(this.p2_picture);
+            this.Controls.Add(this.p1_picture);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -146,6 +150,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.p1_picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.p2_picture)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,8 +173,8 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label p2_current_card;
-        private System.Windows.Forms.Label p1_current_card;
+        private System.Windows.Forms.PictureBox p1_picture;
+        private System.Windows.Forms.PictureBox p2_picture;
     }
 }
 

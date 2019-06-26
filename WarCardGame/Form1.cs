@@ -46,8 +46,12 @@ namespace WarCardGame
             label8.Text = _game.Player2.Cards.Count.ToString();
             label7.Text = _game.Player1.Cards.Count.ToString();
             _game.PlayRound();
-            p1_current_card.Text = $"{_game.P1CurrentCard.Type} of {_game.P1CurrentCard.Kind}";
-            p2_current_card.Text = $"{_game.P2CurrentCard.Type} of {_game.P2CurrentCard.Kind}";
+            // p1_current_card.Text = $"{_game.P1CurrentCard.Type} of {_game.P1CurrentCard.Kind}";
+            // p2_current_card.Text = $"{_game.P2CurrentCard.Type} of {_game.P2CurrentCard.Kind}";
+            p1_picture.ImageLocation = $"../../static/{_game.P1CurrentCard.Type.Substring(0, 1)}{_game.P1CurrentCard.Kind.Substring(0, 1)}.png";
+            p2_picture.ImageLocation = $"../../static/{_game.P2CurrentCard.Type.Substring(0, 1)}{_game.P2CurrentCard.Kind.Substring(0, 1)}.png";
+            p1_picture.Load();
+            p2_picture.Load();
             label10.Text = _game.Round.ToString();
         }
     }
